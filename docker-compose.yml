@@ -1,5 +1,3 @@
-version: '3.8'
-
 # Networks
 # Defines a custom Docker network called jenkins - Docker creates a private subnet where containers can communicate.
 networks:
@@ -55,4 +53,3 @@ services:
       volumes:
         - jenkins-data:/var/jenkins_home       # Persistent Jenkins home
         - docker-certs-client:/certs/client:ro # Mount TLS client certs read-only
-        - /usr/bin/docker:/usr/bin/docker      # Jenkins CLI for Docker (optional)
