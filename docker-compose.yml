@@ -52,4 +52,4 @@ services:
       volumes:
         - jenkins-data:/var/jenkins_home       # Persistent Jenkins home
         - docker-certs-client:/certs/client:ro # Mount TLS client certs read-only
-      command: sh -c "apt-get update && apt-get install -y docker.io && /usr/local/bin/jenkins.sh"
+      
