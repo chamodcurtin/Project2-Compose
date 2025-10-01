@@ -29,6 +29,7 @@ services:
       - docker-certs-ca:/certs/ca
       - docker-certs-client:/certs/client
       - docker-cache:/var/lib/docker       # Docker image layer cache
+      - jenkins-data:/var/jenkins_home
 
   # Jenkins
   jenkins:
@@ -48,3 +49,4 @@ services:
       volumes:
         - jenkins-data:/var/jenkins_home       # Persistent Jenkins home
         - docker-certs-client:/certs/client:ro # Mount TLS client certs read-only
+        - /usr/bin/docker:/usr/bin/docker:ro
