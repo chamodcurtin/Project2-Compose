@@ -43,7 +43,7 @@ services:
       networks:
         - jenkins
       environment:
-        - DOCKER_HOST=tcp://dind:2376       # Connect Jenkins to DinD
+        - DOCKER_HOST=tcp://docker:2376       # Connect Jenkins to DinD
         - DOCKER_CERT_PATH=/certs/client
         - DOCKER_TLS_VERIFY=1
       ports:
