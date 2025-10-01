@@ -32,7 +32,6 @@ services:
     volumes:
       - docker-certs-ca:/certs/ca
       - docker-certs-client:/certs/client
-      - jenkins-data:/var/jenkins_home     # Optional: share volume with Jenkins
       - docker-cache:/var/lib/docker       # Docker image layer cache
 
   # Jenkins
